@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/font-family.css">
+</head>
+<body>
+  
+  <% if (login){ %>
+    <h1>Bienvenid@!</h1>
+    <h1>Has sido conectado como: <strong> <%= name %> </strong></h1>
+    <a href="logout" class="a-logout">Salir</a>
+  <% } else { %>
+    <h1>Alto! primero debes iniciar sesión</h1>
+    <a href="login" class="a-login">Iniciar sesión</a>
+  <% } %>
+  
+</body>
+</html>

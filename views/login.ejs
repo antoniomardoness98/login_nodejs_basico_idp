@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="resources/css/style.css">
+  <link rel="stylesheet" href="resources/css/font-family.css">
+  <title>Iniciar sesión</title>
+</head>
+<body>
+
+  <div class="login-form">
+    <h1>BIENVENID@!</h1>
+    <form action="auth" method="POST">
+      <input type="text" name="user" id="user" placeholder="Usuario" >
+      <input type="password" name="pass" id="pass" placeholder="Contraseña" >
+      <input type="submit" value="Conectar" class="btn-login">
+    </form>
+    <br>
+    <a href="register" class="btn-register">¿Necesitas una cuenta?</a>
+  </div>
+
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <% if(typeof alert !="undefined"){ %>
+    <script>
+      Swal.fire({
+        title: '<%= alertTitle %>',
+        text: '<%= alertMessage %>',
+        icon: '<%= alertIcon %>',
+        showConfirmButton: <%= showConfirmButton %>,
+        timer: <%= timer %>
+      }).then(() => {
+        window.location =  '/<%= ruta %>'
+      })
+    </script>
+  <% } %>
+  
+</body>
+</html>
