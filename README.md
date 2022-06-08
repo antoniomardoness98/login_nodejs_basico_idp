@@ -12,4 +12,4 @@ Breve tutorial de como realizar un login con node js y mysql
 - permite entender rutas
 - autentificación
 
-### Todas las gracias al instructor
+## Todas las gracias al instructor
